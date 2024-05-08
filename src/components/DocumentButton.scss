@@ -1,0 +1,30 @@
+.button-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  overflow: hidden;
+  min-width: 10rem;
+
+    .button-pdf-buttons {
+      display: flex;
+      justify-content: space-between;
+      .button-pdf-button {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        .button-pdf-image {
+          width: 1em;
+          height: 1em;
+        }
+        &:nth-child(2) {
+          border-left: 1px solid black;
+        }
+      }
+
+    }
+  
+}
