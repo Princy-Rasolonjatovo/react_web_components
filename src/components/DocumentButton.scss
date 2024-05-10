@@ -1,7 +1,10 @@
+$color-smoke-black : #130C02;
+$color-russian-purple : #230635;
+
 .button-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  /*border: 1px solid black; uncommented*/
   overflow: hidden;
   min-width: 10rem;
 
@@ -16,13 +19,50 @@
         padding-top: 6px;
         padding-bottom: 6px;
         cursor: pointer;
+        /*add*/
+        border: 1px solid black;
+        margin-right: 5px;
+        background-color: $color-russian-purple;
+        color: #fff;
+        /*end add*/
         .button-pdf-image {
-          width: 1em;
-          height: 1em;
+          width: 1.1em;
+          height: 1.1em;
+          path{
+            fill:#fff;
+          }
+          &.down
+          {
+            path
+            {
+              stroke: #fff;
+              fill:none;
+            }
+          }
         }
         &:nth-child(2) {
           border-left: 1px solid black;
         }
+
+        &:hover
+          {
+            background-color: #fff;
+            color: $color-russian-purple;
+          .button-pdf-image {
+            path{
+              fill:$color-russian-purple;
+            }
+            &.down
+            {
+              path
+              {
+                stroke: $color-russian-purple;
+                fill:none;
+              }
+            }
+          }
+          }
+
       }
 
     }
